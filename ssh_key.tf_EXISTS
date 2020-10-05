@@ -1,0 +1,22 @@
+/*
+provider "aws" {
+  access_key              = var.aws_access_key
+  secret_key              = var.aws_secret_key
+  region                  = var.aws_region
+  shared_credentials_file = "~/.aws/credentials"
+  profile                 = "terraform"
+
+}
+
+
+module "provider" {
+  source = "../modules/provider/"
+  aws_access_key      = var.aws_access_key
+  aws_secret_key      = var.aws_secret_key
+}
+*/
+
+resource "aws_key_pair" "terraform_user" {
+  key_name   = "ubuntu-docker-host"
+  public_key = file("~/.ssh/id_rsa.pub")
+}
