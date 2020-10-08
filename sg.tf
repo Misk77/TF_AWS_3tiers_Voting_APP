@@ -9,10 +9,19 @@ resource "aws_security_group" "terraform" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  # This is the vote page
   ingress {
     description = "HTTP"
     from_port   = 80
     to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  # This is the result page
+  ingress {
+    description = "HTTP"
+    from_port   = 80
+    to_port     = 8081
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -28,7 +37,6 @@ resource "aws_security_group" "terraform" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
   egress {
     from_port   = 0
     to_port     = 0

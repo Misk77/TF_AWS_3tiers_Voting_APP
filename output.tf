@@ -5,6 +5,6 @@ output "Public_IPv4_address" {
 
 output "Public_IPv4_DNS" {
   description = "Output the public DNS"
-  value       = aws_instance.dockerHost.public_dns
+  value       = aws_instance.dockerHost.*.public_dns
 }
 
