@@ -5,6 +5,6 @@ aws ec2 with docker and 3 containers
 # If you ned to create a pem via terraform
 ssh_key.tf_EXISTS
 # info 1
-
+docker-compose starting voiting app without reboot
 # info 2
 

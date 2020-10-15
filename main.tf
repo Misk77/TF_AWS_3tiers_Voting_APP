@@ -32,7 +32,8 @@ resource "aws_instance" "dockerHost" {
 
 
 /*
-Below not nedeed, we start this install everything, verify that voting app is working
+Below #########################  NOT IN USE  
+ not nedeed, we start this install everything, verify that voting app is working
 Create an ami, and using that ami in the terraform
 */
 
